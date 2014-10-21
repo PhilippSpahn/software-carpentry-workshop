@@ -7,4 +7,9 @@ unzip rawdata.zip
 echo Deleting temporarys...
 rm *.tmp
 echo Renaming ...
-rm *.txt *.csv
+for f in *.txt
+	do
+	mv $f ${f/txt/csv}
+	done
+echo Available csv files ...
+ls *.csv
