@@ -9,7 +9,7 @@ print data.head()
 # conversion to celsius
 data_C = mosquito_lib.FahrenheitToCelsius(data)
 print data_C.head()
-regr_params = mosquito_lib.analyze(data_C)
+regr_params = mosquito_lib.analyze(data_C,"RealvsPredicted.png")
 # save to file
 regr_params.to_csv("parameters.csv")
 print regr_params
